@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1 {
+    color: white;
+    font-family: "Fredericka the Great";
+    font-size: 50px;
+    position: relative;
+    left: 0%;
+    top: 9%; 
+    font-weight: 400;
+    font-style: normal;
+}
+    
+.container{
+    display: flex; 
+    background-color: linear-gradient(#19641d ,#98d2a4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    height: 550px;
+    width: 1000px;
+    max-width: 200%;
+    min-width: 480px;
+    border-radius: 16px;    
+}
+
+.cadastro{
+  background-image: linear-gradient(#155318 ,#52935f);
+  background-position: 100%;
+  width: 450px;
+  padding: 0px 0px 200px 0px;
+}
+
+title{
+    font-family: Courier;    
+}
+
+p{
+    font-family: "Amatic SC";
+    color: #fff;
+    font-size: 10px;
+    right: 9%;
+    position: relative;
+    
+    
+} 
+
+.input-box{
+    width: 100%;
+    height: 100%;
+    background: #F6F98A;
+    border: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+
+body{
+    background-image: linear-gradient(#9bd29e ,#c7f1d0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;    
+}
+
+.button_entrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;    
+}
+
+.container input{
+    background-color: #F6F98A;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 20px 8px 28px;
+}
+
+.jorge{
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0;
+    left: 41%;
+}
+
+.container button{
+    background-color: #F6F98A;
+    color: rgb(29, 64, 12);
+    font-size: 12px;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    line-height: 1.6;
+    font-family: "Fredericka the Great";
+    font-size: 15px;
+    text-align: center;  
+    font-weight: 40;
+    font-style: normal;
+    cursor: pointer;
+    cursor: hand;
+}
+button{
+    position: relative;
+    top: 10px;
+}
+
+.input-icon-senha {
+      background-image: url(../icons/lock.png);
+      background-repeat: no-repeat;
+}
+
+.input-icon-email {
+        background-image: url(../icons/at-regular.png);
+        background-repeat: no-repeat;        
+}
+
+.input-icon-nome {
+        background-image: url(../icons/user.png);
+        background-repeat: no-repeat;
+}
+
+label{
+    font-family: "Amatic SC";
+    color: #fff;
+    Word-spacing: 80px;
+    font-size: 20px;
+}
+
+.logo{
+    height: 70px;
+    width: 60px;
+    padding: 15px 15px;
+    font-size: 45px;
+    line-height: 50px;
+    float: left;
+}
+
+select #select{
+    background-color: #F6F98A;
+    font-family: "Amatic SC";
+    font-weight: 900;
+    font-size: 20px;
+    border-color: #deb84f;
+    cursor: pointer;
+    cursor: hand;
+}
