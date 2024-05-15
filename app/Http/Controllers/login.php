@@ -24,10 +24,10 @@ class login extends Controller
         if($pessoa && password_verify($request->senha, $pessoa->senha)){
             $tipo = $pessoa->tipo;
             if($tipo == 0){
-                return view('InicioAluno', ['pessoa' => $pessoa]);
+                return view('aluno.InicioAluno', ['pessoa' => $pessoa]);
             }
             elseif($tipo == 1){
-                return view('InicioProfessor', ['pessoa' => $pessoa]);
+                return view('professor.InicioProfessor', ['pessoa' => $pessoa]);
         } 
         }else{
             $mensagemErro = "Sua senha ou o seu E-mail está errado!";
