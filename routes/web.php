@@ -17,6 +17,11 @@ Route::prefix('/aluno')->group(function(){
     Route::get('/planejamento', [planejamento::class, 'planejamento'])->name('panejamento');
 }); 
 
+Route::prefix('/professor')->group(function(){
+    Route::get('/inicio', [planejamento::class, 'InicioAluno'])->name('InicioProfessor');
+    Route::get('/planejamento', [planejamento::class, 'planejamento'])->name('panejamento');
+}); 
+
 
 Route:: fallback( function(){
     return view('fallback');

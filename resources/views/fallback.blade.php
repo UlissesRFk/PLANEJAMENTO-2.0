@@ -22,7 +22,8 @@
 </head>
 <body>
     <div class="h">
-  <h1> <a href="{{ route('login')}}">Volatr para o login</a> </h1>
+    
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.href='{{ route('login') }}'">Voltar para o Login</button>
 </div>
 <footer>
     planejamento

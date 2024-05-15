@@ -14,19 +14,25 @@ class login extends Controller
     public function autenticar(Request $request){
         $regras = [
             'email' => 'email',
-            'senha' => 'required'
+            'senha' => 'required',
+            'tipo' => 'tipo'
         ];
 
         $request->validate($regras);
 
-        $pessoas = Pessoa::where('email', $request ->email)->first();
-        if($pessoas && password_verify($request->senha, $pessoas->senha)){
-            return view('InicioAluno', ['pessoas' => $pessoas]);
-        } else{
+        $pessoa = Pessoa::where('email', $request ->email)->first();
+        if($pessoa && password_verify($request->senha, $pessoa->senha)){
+            $tipo = $pessoa->tipo;
+            if($tipo == 0){
+                return view('InicioAluno', ['pessoa' => $pessoa]);
+            }
+            elseif($tipo == 1){
+                return view('InicioProfessor', ['pessoa' => $pessoa]);
+        } 
+        }else{
             $mensagemErro = "Sua senha ou o seu E-mail está errado!";
-            return redirect()->back()->withInput()->withErrors(['mensagemErro', $mensagemErro]);
-        }
-        
+            return redirect()->back()->withInput()->withErrors(['mensagemErro' => $mensagemErro]);
+         }             
     }
 }
   

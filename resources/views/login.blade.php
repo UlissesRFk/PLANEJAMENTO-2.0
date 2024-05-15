@@ -6,16 +6,13 @@
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <link rel="shortcut icon" type="image/jpg" href="{{asset('img/logo.png')}}"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>LOGIN | Planejamneto 2.0</title>
 </head>
 <body>
-@if($errors->has('mensagemErro'))
-    <div class="alert alert-danger">
-        {{ $errors->first('mensagemErro') }}
-    </div>
-@endif
-<div class="container">  
+<div class="body">
+ <div class="container">  
     <div class="cadastro">
     <img class="logo" src="{{asset('img/logo.png')}}">
     <div><h1>LOGIN</h1></div>
@@ -33,7 +30,15 @@
             </div>  
         </form>
     </div>    
+ </div>
+
 </div>
-<a href="{{route('cadastro')}}">CASAAAAAAATRO</a>
+@if($errors->has('mensagemErro'))
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ $errors->first('mensagemErro') }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="{{route('login')}}"> &times;</button>
+</div>
+@endif
+</div>
 </body>
 </html>    
