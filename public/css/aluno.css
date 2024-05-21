@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0 ;
+}
+
+.container {
+    display: flex;
+}
+
+.container .student {
+    width: 70%;
+    height: 100vh;
+}
+
+.container .student img {
+    width: 1000px;
+    height: 900px;
+}
+
+.container .info {
+    background-color: #FFC727;
+    width: 30%;
+}
+
+.img-example {
+    position: absolute;
+    bottom: 0;
+}
+
+.triangulo {
+    width: 100%;
+    height: 100%;
+}
+
+.container .info .button-schedule {
+    position: relative;
+    top: 150px;
+}
+
+.button-horario {
+    position: relative;
+    font-family: Amatic SC;
+    font-size: 80px;
+    left: 120px;
+    width: 340px;
+    border-radius: 40px;
+    background-color: #3D9D1B;
+    color: white;
+}
+
+.button-holiday {
+    position: relative;
+    top: 200px;
+    right: 100px;
+}
+
+.button-feriados {
+    position: relative;
+    font-family: Poppins;
+    left: 200px;
+    font-size: 24px;
+    width: 187px;
+    border-radius: 40px;
+    background-color: #3D9D1B;
+    color: white;
+    z-index: 1;
+}
+
+.button-schedule hr {
+    position: relative;
+    left: 100px;
+    width: 380px;
+    margin-top: 20px;
+}
+.button-holiday hr {
+    position: relative;
+    left: 200px;
+    width: 380px;
+    margin-top: 70px;
+}
+.x{
+    position: relative;
+    top: 250px;
+    left: 50px;
+    width: 180px;
+}
+.button-holiday svg{
+    position: relative;
+    top: 50px;
+    left: 70px;
+    color: white;
+    z-index: 0;
+ }
+ body {
+    display: absolute;
+ }

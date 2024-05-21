@@ -11,6 +11,6 @@ class planejamento extends Controller
     }
 
     public function InicioAluno(){
-        return view('InicioAluno');
+        return view('aluno/InicioAluno');
     }
 }

@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pessoa extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'nome',
         'email',
         'senha',
-        'tipo'
+        'tipo',
+        'turma_id'
     ];
-   
-    use HasFactory;
+
+    public function turma()
+    {
+        return $this->belongsTo(Turma::class);
+    }
 }

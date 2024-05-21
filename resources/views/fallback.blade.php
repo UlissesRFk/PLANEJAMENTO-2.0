@@ -14,7 +14,7 @@
         background-color: #55A24D;
      }
      .img-erro{
-        width:1000px;
+        width:650px;
         max-width: 100%;
         height: auto;
      }
@@ -22,25 +22,37 @@
         height:80px;
      }
      footer{
-        background: white;
+        background: #55A24D;
         width: 100%;
         height: 50px;
         position: absolute;
      }
      .botão{
-        width: 250px;
+      color: #FFF;
+      background-color: #FFC727;
+      border: none;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 20 0 20 0px;
+      height: 50px;
+      width: 250px;
+      border-radius: 30px;
+           
      }
 </style>
 </head>
 <body>
 
-<div class="fallback">
-    <div class="botão">
-     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.href='{{ route('login') }}'">Voltar para o Login</button>
-    </div>
-    <img class="img-erro" src="{{asset('img/404 Error.png')}}">
-</div>
 
+
+<div class="fallback">
+    <img class="img-erro" src="{{asset('img/404 Error.png')}}">
+        <div class="botão_div">
+     <button class="botão" onclick="window.location.href='{{ route('login') }}'">Voltar para o Login</button>
+    </div>
+</div>
 <footer>
     <img class="img-footer" src="{{asset('img/planejamneto_footer.png')}}">
 </footer>
