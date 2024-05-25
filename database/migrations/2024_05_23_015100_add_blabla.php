@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-            Schema::table('turmas', function (Blueprint $table) {
-                $table->dropColumn('pessoa_id');
-            });
+        Schema::table('pessoas', function (Blueprint $table) {
+            $table->string('email')->notnull();
+            $table->string('senha')->notnull();
+        });
     }
 
     /**
@@ -21,8 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tabea', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };
