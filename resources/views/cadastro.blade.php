@@ -35,10 +35,11 @@
                 <div>
                     <img class="jorge" src="{{ asset('img/jorge.png') }}">
                 </div>  
+               
             </form>
-        </div>    
-    </div>
-
+</div>    
+</div>
+  
     @if(session('mensagemCerto'))
         <div id="successModal" class="modal" style="display:block;">
             <div class="modal-content">
@@ -50,7 +51,7 @@
         <div id="errorModal" class="modal" style="display:block;">
             <div class="modal-content">
                 <span class="close" onclick="document.getElementById('errorModal').style.display='none'">&times;</span>
-                <h1 class="ca">{{ session('mensagemErro') }}</h1>
+                <h1 class="ca"><i class='bx bx-error-circle'></i> {{ session('mensagemErro') }}</h1>
             </div>
         </div>
     @endif

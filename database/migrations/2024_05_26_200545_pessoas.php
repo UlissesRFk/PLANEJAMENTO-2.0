@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nome')->notnull();
             $table->string('email')->unique()->notnull();
-            $table->string('senha')->unique()->notnull();
+            $table->string('senha')->notnull();
+            $table->enum('tipo',['0','1'])->nullable();
             $table->timestamps();
+            $table->unsignedBigInteger('materias_id');
+            $table->foreign('materias_id')->references('id')->on('materias');
         });
     }
 

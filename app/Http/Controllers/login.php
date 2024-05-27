@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pessoa;
+use App\Models\Materia;
 
 class login extends Controller
 {
-     public function login(){
+    public function login(){
         return view('login');
     }
 
@@ -24,37 +25,35 @@ class login extends Controller
         if($pessoa && password_verify($request->senha, $pessoa->senha)){
             $tipo = $pessoa->tipo;
             if($tipo == 0){
-                return view('aluno.InicioAluno', ['pessoa' => $pessoa]);
-            }
-            elseif($tipo == 1){
-                return view('professor.InicioProfessor', ['pessoa' => $pessoa]);
-        } 
-        }else{
-            $mensagemErro = "Sua senha ou o seu E-mail está errado!";
-            return redirect()->back()->withInput()->withErrors(['mensagemErro' => $mensagemErro]);
-         }   
-         
-         $credentials = $request->only('email', 'senha');
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
+                $turmas = $pessoa->materias_id;
+                if($turmas == 1){
+                    return view('aluno.turmaDS1', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 2){
+                        return view('aluno.turmaDS2', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 3){
+                        return view('aluno.turmaDS3', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 4){
+                        return view('aluno.turmaCTB1', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 5){
+                        return view('aluno.turmaCTB2', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 6){
+                        return view('aluno.turmaCTB3', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 7){
+                        return view('aluno.turmaMULT1', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 8){
+                        return view('aluno.turmaMULT2', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 9){
+                        return view('aluno.turmaMULT3', ['pessoa' => $pessoa, 'turmas' => $turmas]);}
+                    elseif($turmas == 10){
+                            return view('aluno.turmaRDS', ['pessoa' => $pessoa, 'turmas' => $turmas]);} 
 
-            if ($user->tipo == 1 && !ends_with($user->email, '@professor.ce.gov.br')) {
-                Auth::logout();
-                return redirect()->back()->withErrors(['email' => 'Apenas professores podem usar este e-mail.']);
-            } elseif ($user->tipo == 2 && !ends_with($user->email, '@aluno.ce.gov.br')) {
-                Auth::logout();
-                return redirect()->back()->withErrors(['email' => 'Apenas alunos podem usar este e-mail.']);
+                elseif($tipo == 1){
+                    return view('professor.InicioProfessor', ['pessoa' => $pessoa]);
+                } 
             }
-
-            if($user -> tipo == 0){
-                return view('aluno/InicioAluno');
-            }
-            if($user -> tipo == 1)
-            return view('professor/InicioProfessro');
         }
-        return redirect()->back()->withErrors(['senha' => 'Credenciais inválidas.']);
     }
-    }
+}
 
         
   
