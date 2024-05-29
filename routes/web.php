@@ -7,9 +7,6 @@ use  App\Http\Controllers\login;
 use  App\Http\Controllers\cadastro;
 use  App\Http\Controllers\MateriaController;
 
-
-
-
 Route::get('/cadastro',[cadastro::class,'mostrarFormulario'])->name('cadastro');
 Route::post('/salvar_cadastro',[cadastro::class, 'salvarCadastro']) -> name('salvarCadastro');
 
@@ -35,3 +32,4 @@ Route:: fallback( function(){
     return view('fallback');
 });
 Route::get('/feriados', [planejamento::class, 'feriados'])->name('feriados');
+Route::get('/Cadastroferiados', [planejamento::class, 'Cadastroferiados'])->name('adastroFeriados');

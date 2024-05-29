@@ -2,186 +2,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* LOGIN */
+
 *{
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-image: linear-gradient(#9bd29e ,#c7f1d0);
+.main-login {
+    width: 100vw;
     height: 100vh;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; */
 }
 
-h1 {
-    color: white;
-    font-family: "Fredericka the Great";
-    font-size: 70px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
-
-.container-login {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.left-form{
-    background-image: linear-gradient(#19641d ,#98d2a4);
-    width: 50%;
-}
-
-.left-form .form-login {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.left-form .form-login form {
+.left-login {
+    width: 50vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-}
-
-.img-form {
-    width: 50%;
-}
-
-.img-form .img {
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/jorge.png);
+    background: rgb(37,125,41);
+    background: linear-gradient(184deg, rgba(37,125,41,1) 0%, rgba(84,144,96,1) 100%);
 }
 
 .logo {
+    padding: 5px;
+}
+
+.logo > img {
+    height: 70px;
     width: 60px;
-    height: 80px;
-    padding: 15px 15px;
-    font-size: 45px;
-    line-height: 50px;
-}
-/* .cadastro{
-  background-image: linear-gradient(#155318 ,#52935f);
-  background-position: 100%;
-  width: 450px;
-  padding: 0px 0px 200px 0px;
-} */
-
-/* title{
-    font-family: Courier;
-} */
-
-p{
-    font-family: "Amatic SC";
-    color: #fff;
-    font-size: 10px;
 }
 
-/* .input-box{
-    background: #F6F98A;
-    border: none;
-    outline: none;
-    border: 2px solid;
-    border-radius: 40px;
-    padding: 20px 45px 20px 20px;
-} */
-
-/* .container-login form{
+.card-login {
+    width: 80%;
+    height: 85%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-self: center;
     flex-direction: column;
-    height: 90%;
-} */
-
-.button_entrar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
+    padding: 30px 35px;
+    background-color: transparent;
 }
 
-label {
-    font-family: "Amatic SC";
-    color: #fff;
-    Word-spacing: 80px;
-    font-size: 25px;
-    padding-bottom: 20px;
-}
-
-.input-email {
-    margin-bottom: 40px;
-}
-
-input {
-    background-color: #F6F98A;
-    border: none;
-    font-size: 13px;
-    border-radius: 30px;
-    width: 460px;
-    height: 10px;
-    margin: 10px 0 5px 0;
-    padding: 13px;
-}
-
-/* .jorge{
-    position: absolute;
-    top: 0;
-    width: 60%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0;
-    left: 41%;
-} */
-
-.container-login button{
-    background-color: #F6F98A;
-    color: rgb(29, 64, 12);
-    font-size: 15px;
-    width: 140px;
-    padding: 7px 20px;
-    border: none;
-    border-radius: 30px;
-    font-weight: 1000;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    line-height: 1.6;
-    font-family: "Fredericka the Great";
+.card-login > h1 {
+    color: white;
+    font-family: 'Fredericka the Great';
+    font-size: 50px;
+    font-weight: 500;
     text-align: center;
-    cursor: pointer;
-}
-/* button {
-    position: relative;
-    top: 10px;
-} */
-
-/* .input-icon-senha {
-    background-image: url(../icons/lock.png);
-    background-repeat: no-repeat;
+    letter-spacing: 3px;
 }
 
-.input-icon-email {
-    background-image: url(../icons/at-regular.png);
-    background-repeat: no-repeat;
+.text-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
 }
 
-.input-icon-nome {
-    background-image: url(../icons/user.png);
-    background-repeat: no-repeat;
-} */
-
-select #select{
+.text-field > input {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
     background-color: #F6F98A;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text-field > input::placeholder {
+    color: black;
+    font-size: 15px;
+}
+
+.text-field > label {
+    color: white;
     font-family: "Amatic SC";
-    font-weight: 900;
     font-size: 20px;
-    border-color: #deb84f;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.btn-entrar {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-entrar > button {
+    width: 40%;
+    background-color: #F6F98A;
+    padding: 8px;
+    margin: 25px;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 1000;
     cursor: pointer;
-    cursor: hand;
+    box-sizing: border-box;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+
+}
+
+.right-login > img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 950px) {
+    .left-login {
+        width: 100vw;
+    }
+
+    .card-login {
+        width: 80%;
+    }
+
+    .card-login > h1 {
+        font-size: 40px;
+    }
+
+    .right-login {
+        display: none;
+    }
+
 }

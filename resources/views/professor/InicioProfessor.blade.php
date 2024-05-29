@@ -13,7 +13,7 @@
         </div>
 
         <div class="info">
-            <h1>Nome do professor</h1>
+            <h1>{{$pessoa->nome}}</h1>
 
 
             <div class="button-schedule">

@@ -12,34 +12,44 @@
     <title>CADASTRO | Planejamento 2.0</title>
 </head>
 <body>
-    <div class="container">  
-        <div class="cadastro">
-            <img class="logo" src="{{ asset('img/logo.png') }}">
-            <div><h1>CADASTRO</h1></div>
+    <main class="main-cadastro">
+        <div class="left-cadastro">
+            <div class="logo">
+                <img src="{{ asset('img/logo.png') }}">
+            </div>
+            <div class="card-cadastro">
+                <h1>CADASTRO</h1>
             <form action="{{ route('salvarCadastro') }}" method="post" id="pizza-form">
                 @csrf
-                <p><label for="nome">Nome <br></label>
-                <input class="input-icon-nome" type="text" id="old{{ 'nome' }}" name="nome" placeholder="Escreva seu nome completo" required></p>
-                <p><label for="email">E-mail <br></label>
-                <input class="input-icon-email" type="text" id="old{{ 'email' }}" name="email" placeholder="Escreva seu email" required></p>
-                <p><label for="senha">Senha <br></label>
-                <input class="input-icon-senha" type="password" id="old{{ 'senha' }}" name="senha" placeholder="Crie uma senha" required></i></p>
-                <label for="select">Selecione:</label>
-                <select name="tipo" id="select">
+                <div class="text-field">
+                    <label for="email">Nome:</label>
+                    <input type="text" name="nome" id="old{{ 'nome' }}" placeholder="Insira seu nome">
+                </div>
+                <div class="text-field">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="old{{ 'email' }}" placeholder="Insira seu e-mail">
+                </div>
+                <div class="text-field">
+                    <label for="email">Senha:</label>
+                    <input type="password" name="senha" id="old{{ 'senha' }}" placeholder="Insira uma senha">
+                </div>
+                <div class="text-field">
+                    <label for="email">Tipo: </label>
+                    <select name="tipo" id="select">
                     <option class="professor" value="1"><strong>Professor</strong></option>
                     <option class="aluno" value="0">Aluno</option>
                 </select>
-                <div>
+                </div>
+                <div class="btn-cadastro">
                     <button type="submit">CADASTRAR</button>
                 </div>
-                <div>
-                    <img class="jorge" src="{{ asset('img/jorge.png') }}">
-                </div>  
-               
+                <div class="right-cadastro">
+                 <img src="{{ asset('img/jorge.png') }}" alt="">
+                 </div>   
             </form>
 </div>    
 </div>
-  
+</main>
     @if(session('mensagemCerto'))
         <div id="successModal" class="modal" style="display:block;">
             <div class="modal-content">

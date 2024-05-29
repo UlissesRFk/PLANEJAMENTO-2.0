@@ -14,7 +14,8 @@
 
         <div class="info">
             <h1>DESENVOLVIMENTO DE SISTEMAS 1</h1>
-            <h2>Nome do aluno</h2>
+            <h2>{{ $pessoa->nome }}</h2>
+
 
             <div class="button-schedule">
                 <button type="button" class="button-horario">

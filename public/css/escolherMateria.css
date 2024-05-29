@@ -1,0 +1,83 @@
+body {
+    background-color: #3CBE43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative; 
+}
+
+h1 {
+    color: white; 
+    font-family: 'Fredericka the Great', cursive; 
+    font-size: 3em;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.container {
+    background-color: white;
+    border: 10px solid yellow;
+    border-radius: 40px;
+    padding: 20px;
+    width: 600px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 90px; 
+}
+
+.container form {
+    display: flex;
+    justify-content: space-between; /* Distribute space between columns */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Each column takes up about half the container */
+}
+
+.container label {
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Fredericka the Great', cursive; /* Apply the same font as h1 */
+}
+
+.container button {
+    background-color: #3CBE43;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 40px; /* Aumente o padding para aumentar o tamanho do botão */
+    cursor: pointer;
+    margin-top: 4px;
+    align-self: center;
+}
+
+.container button:hover {
+    background-color: #34a338;
+}
+
+.container button:active {
+    background-color: #FFEF5C; /* Change color when the button is clicked */
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.icon-2024 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #333; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+}

@@ -51,8 +51,7 @@ class Cadastro extends Controller
      $pessoa = Pessoa::findOrFail($id);
     $materias = Materia::all();
     return view('escolherMateria', compact('pessoa', 'materias'));
+    }
 }
 
-  
 
-}

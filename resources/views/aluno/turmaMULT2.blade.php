@@ -13,8 +13,9 @@
         </div>
 
         <div class="info">
-            <h1>Turma</h1>
-            <h2>Nome do aluno</h2>
+           <h1>MULTIMÍDIA 2</h1>
+            <h2>{{ $pessoa->nome }}</h2>
+
 
             <div class="button-schedule">
                 <button type="button" class="button-horario">
