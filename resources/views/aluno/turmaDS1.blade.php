@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
     <link rel="stylesheet" href="{{asset('css/aluno.css')}}">
+    <script src="{{asset('js/feriados.js')}}"></script>
 </head>
 <body>
     <div class="container">
@@ -28,7 +29,7 @@
             </div>
 
             <div class="button-holiday">
-                <button type="button" class="button-feriados">
+               <button type="button" class="button-feriados"  onclick="window.location='{{ route('feriadosView')}}'">
                     Feriados
                 </button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">

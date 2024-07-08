@@ -8,9 +8,7 @@ use App\Models\Materia;
 class login extends Controller
 {
     public function login(){
-        $loginSuccess = null;
-        $loginError = null;
-        return view('login', compact('loginSuccess', 'loginError'));
+        return view('login');
     }
 
     public function autenticar(Request $request){
@@ -57,7 +55,7 @@ class login extends Controller
             }
         } else {
             $request->session()->flash('loginError', true);
-            return redirect()->back()->withErrors(['mensagemErro' => 'Credenciais inválidas.']);
+            return redirect()->back()->withErrors(['mensagemErro' => 'O E-mail ou senha está incorreto!']);
         }
     }
 }

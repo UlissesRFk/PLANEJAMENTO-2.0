@@ -12,6 +12,14 @@ body {
     height: 100%;
 }
 
+.title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px; /* Aumentando o tamanho do título */
+    margin-bottom: 20px;
+    margin-top: 40px; 
+    text-align: center; /* Centralizando o texto */
+}
+
 .container {
     display: flex;
 }

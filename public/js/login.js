@@ -1,9 +1,17 @@
-$(document).ready(function() {
-    if(session('loginSuccess'))
-        $('#successModal').show();
-    endif
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.hasErrors) {
+        var errorMessage = window.errorMessage;
+        document.getElementById('errorMessage').innerText = errorMessage;
+        document.getElementById('errorModal').style.display = 'block';
+    }
 
-    if(session('loginError'))
-        $('#errorModal').show();
-    endif
+    document.querySelector('.close').addEventListener('click', function() {
+        document.getElementById('errorModal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('errorModal')) {
+            document.getElementById('errorModal').style.display = 'none';
+        }
+    });
 });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela professor</title>
     <link rel="stylesheet" href="{{asset('css/professor.css')}}">
+    <script src="{{asset('js/feriados.js')}}"></script>
 </head>
 <body>
     <div class="container">
@@ -13,7 +14,7 @@
         </div>
 
         <div class="info">
-            <h1>{{$pessoa->nome}}</h1>
+            <h1 class="title">{{$pessoa->nome}}</h1>
 
 
             <div class="button-schedule">
@@ -24,7 +25,7 @@
             </div>
 
             <div class="button-holiday">
-                <button type="button" class="button-feriados">
+                <button type="button" class="button-feriados"  onclick="window.location='{{ route('feriadosView')}}'">
                     Feriados
                 </button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
